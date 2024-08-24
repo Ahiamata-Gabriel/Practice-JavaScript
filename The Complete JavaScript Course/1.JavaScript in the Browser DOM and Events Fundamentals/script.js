@@ -10,7 +10,7 @@ let score = 20;
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 document.querySelector(".check").addEventListener("click", function () {
-  const guess = Number(document.querySelector(".guess").value);
+  let guess = Number(document.querySelector(".guess").value);
 
   //When there is no input
   if (!guess) {
@@ -52,4 +52,9 @@ againBtn.addEventListener("click", () => {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
   message.textContent = "Start guessing ...";
+  scoreEl.textContent = score;
+  number.textContent = "?";
+  guess.value = "";
+  body.style.backgroundColor = "#222";
+  number.style.width = "15rem";
 });
