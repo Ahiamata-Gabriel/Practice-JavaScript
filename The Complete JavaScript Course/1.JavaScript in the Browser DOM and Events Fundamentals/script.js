@@ -3,10 +3,11 @@ let message = document.querySelector(".message");
 let scoreEl = document.querySelector(".score");
 let number = document.querySelector(".number");
 const body = document.querySelector("body");
+let againBtn = document.querySelector(".again");
 
 let score = 20;
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
@@ -45,4 +46,10 @@ document.querySelector(".check").addEventListener("click", function () {
       scoreEl.textContent = 0;
     }
   }
+});
+
+againBtn.addEventListener("click", () => {
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  message.textContent = "Start guessing ...";
 });
