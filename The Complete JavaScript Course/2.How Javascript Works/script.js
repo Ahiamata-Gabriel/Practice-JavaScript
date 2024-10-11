@@ -8,4 +8,5 @@ const jonas = {
   greet: () => console.log(`Hey ${this.firstName}`),
 };
 
+//NB : Arrow functtions do not have thier own this method.
 jonas.greet();
