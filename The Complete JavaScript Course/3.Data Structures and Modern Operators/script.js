@@ -28,3 +28,22 @@ const restaurant = {
   },
 };
 const arr = [2, 3, 4];
+
+let x = 20;
+let y = 25;
+
+// let temp = x;
+// x = y;
+// y = temp;
+
+[y, x] = [x, y];
+
+console.log(`X: ${x} , Y : ${y}`);
+
+const nested = [2, 4, [5, 6]];
+
+const [m, , n] = nested;
+const [i, , [k, l]] = nested;
+
+console.log(m, n);
+console.log(i, k, l);
