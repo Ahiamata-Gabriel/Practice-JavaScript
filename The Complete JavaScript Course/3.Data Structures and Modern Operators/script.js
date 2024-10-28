@@ -32,11 +32,5 @@ const restaurant = {
   },
 };
 
-console.log(restaurant.order(0, 2));
-
-let str = "jonas";
-let letters = [...str, " ", "S. "];
-console.log(letters);
-
 //the spread operator
 //and the rest operator
