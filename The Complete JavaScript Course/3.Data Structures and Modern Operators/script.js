@@ -32,5 +32,16 @@ const restaurant = {
   },
 };
 
-//the spread operator
-//and the rest operator
+//const { sat, ...weekdays } = restaurant.openingHours;
+
+//console.log(sat, weekdays);
+
+const add = function (...args) {
+  let sum = 0;
+  for (let i = 0; i < args.length; i++) {
+    sum += args[i];
+  }
+  console.log(sum);
+};
+
+add(2, 5, 8, 9, 7, 6, 9, 12);
