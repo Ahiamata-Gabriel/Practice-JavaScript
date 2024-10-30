@@ -27,3 +27,18 @@ const restaurant = {
     },
   },
 };
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+//console.log(menu);
+
+// console.log("using normal for loop");
+// for (let i = 0; i < menu.length; i++) {
+//   console.log(menu[i]);
+// }
+
+// console.log("using normal for of loop");
+// for (const item of menu) console.log(item);
+
+for (const item of menu.entries()) {
+  console.log(item);
+}
