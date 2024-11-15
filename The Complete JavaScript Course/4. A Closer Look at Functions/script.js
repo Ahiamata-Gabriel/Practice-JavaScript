@@ -20,3 +20,7 @@ const gabby = {
   name: "Ahiamatski GAbby",
   passport: 259689,
 };
+
+const checkIn = function (flightNum, passenger) {};
+
+checkIn(flight, gabby);
