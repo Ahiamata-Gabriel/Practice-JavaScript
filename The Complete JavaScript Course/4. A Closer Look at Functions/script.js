@@ -27,35 +27,39 @@
 
 //const greet = (greeting) => (name) => console.log(`${greeting} ${name}`);
 
-const lufthansa = {
-  airline: "Lufthansa",
-  iataCode: "LH",
-  booking: [],
-  book(flightNum, name) {
-    console.log(
-      `${name} booked a seat on ${this.airline} flight ${this.iataCode}`
-    );
-    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
-  },
-};
+// const lufthansa = {
+//   airline: "Lufthansa",
+//   iataCode: "LH",
+//   booking: [],
+//   book(flightNum, name) {
+//     console.log(
+//       `${name} booked a seat on ${this.airline} flight ${this.iataCode}`
+//     );
+//     this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
+//   },
+// };
 
-lufthansa.book(239, "Jonas Schedtmann");
-lufthansa.book(299, "John Smith");
+// lufthansa.book(239, "Jonas Schedtmann");
+// lufthansa.book(299, "John Smith");
 
-const eurowings = {
-  name: "Eurowings",
-  iataCode: "EW",
-  bookings: [],
-};
+// const eurowings = {
+//   name: "Eurowings",
+//   iataCode: "EW",
+//   bookings: [],
+// };
 
-//const book = lufthansa.book;
-//console.log(book);
+// //const book = lufthansa.book;
+// //console.log(book);
 
-lufthansa.planes = 300;
-lufthansa.buyPlane = function () {
-  console.log(this);
+// lufthansa.planes = 300;
+// lufthansa.buyPlane = function () {
+//   console.log(this);
 
-  this.planes++;
-};
+//   this.planes++;
+// };
 
-console.log(lufthansa);
+// console.log(lufthansa);
+
+(function () {
+  console.log("log this to console");
+})();
