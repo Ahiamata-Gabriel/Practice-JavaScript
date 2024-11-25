@@ -48,5 +48,14 @@ const eurowings = {
   bookings: [],
 };
 
-const book = lufthansa.book;
-console.log(book);
+//const book = lufthansa.book;
+//console.log(book);
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+
+  this.planes++;
+};
+
+console.log(lufthansa);
