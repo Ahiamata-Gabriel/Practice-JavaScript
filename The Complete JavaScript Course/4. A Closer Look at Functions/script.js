@@ -51,7 +51,7 @@
 // //const book = lufthansa.book;
 // //console.log(book);
 
-// lufthansa.planes = 300;
+// lufthansa.planes = 300;f
 // lufthansa.buyPlane = function () {
 //   console.log(this);
 
@@ -60,6 +60,28 @@
 
 // console.log(lufthansa);
 
-(function () {
-  console.log("log this to console");
-})();
+// (function name() {
+//   console.log("log this to console");
+// })();
+
+// const secureBooking = function () {
+//   let passengerCount = 0;
+
+//   return function () {
+//     passengerCount++;
+//     console.log(`${passengerCount}  passengers`);
+//   };
+// };
+
+// const booker = secureBooking();
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+g();
+f();
