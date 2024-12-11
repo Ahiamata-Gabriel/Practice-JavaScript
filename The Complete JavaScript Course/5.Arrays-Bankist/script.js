@@ -18,7 +18,6 @@ const account2 = {
   interestRate: 1.5,
   pin: 2222,
 };
-n;
 
 const account3 = {
   owner: "Steven Thomas Williams",
@@ -75,11 +74,12 @@ const displayMovements = function (movements) {
       </div>
     `;
 
-    containerMovements.insertAdjacentHTML("afterbegin");
+    containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 };
 
 displayMovements(account1.movements);
+console.log("testing");
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
