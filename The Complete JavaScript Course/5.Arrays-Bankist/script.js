@@ -83,6 +83,20 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 //console.log(containerMovements.innerHTML);
 
+//*** BEGINNING OF MODIFIED CODE ***
+
+const createUserNames = (user) => {
+  const username = user
+    .toLowerCase()
+    .split(" ")
+    .map((user) => user[0])
+    .join("");
+  return username;
+};
+
+console.log(createUserNames("Jonas Schmedtmann"));
+console.log(createUserNames("Ahiamata Mawuli Gabriel"));
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -96,5 +110,3 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-
-console.log(accounts[0]);
