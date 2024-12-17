@@ -18,8 +18,16 @@
 
 //checkDogs([3, 5, 2, 12, 7], [4, 1, 15, 8, 3]);
 
-const movementtss = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movementtss = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const toEros = movementtss.map((move) => move * 1.1);
+// const toEros = movementtss.map((move) => move * 1.1);
 
-console.log(toEros);
+// console.log(toEros);
+
+const user = "Steven Thomas Williams";
+const username = user
+  .toLowerCase()
+  .split(" ")
+  .map((user) => user[0])
+  .join("");
+console.log(username);
