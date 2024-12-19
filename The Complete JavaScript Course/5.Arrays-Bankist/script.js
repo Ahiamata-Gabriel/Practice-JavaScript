@@ -85,17 +85,21 @@ displayMovements(account1.movements);
 
 //*** BEGINNING OF MODIFIED CODE ***
 
-const createUserNames = (user) => {
-  const username = user
-    .toLowerCase()
-    .split(" ")
-    .map((user) => user[0])
-    .join("");
-  return username;
+const createUserNames = (accs) => {
+  accs.forEach((acc) => {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((user) => user[0])
+      .join("");
+  });
 };
 
-console.log(createUserNames("Jonas Schmedtmann"));
-console.log(createUserNames("Ahiamata Mawuli Gabriel"));
+createUserNames(accounts);
+//console.log(accounts);
+
+//console.log(createUserNames("Jonas Schmedtmann"));
+//console.log(createUserNames("Ahiamata Mawuli Gabriel"));
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -110,3 +114,10 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+//console.log(movements.filter((mov) => mov < 0));
+
+const widrawals = movements.filter(function (mov) {
+  return mov < 0;
+});
+
+console.log(widrawals);
