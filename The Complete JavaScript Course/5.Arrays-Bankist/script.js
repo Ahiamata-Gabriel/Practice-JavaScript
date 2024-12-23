@@ -85,6 +85,13 @@ displayMovements(account1.movements);
 
 //*** BEGINNING OF MODIFIED CODE ***
 
+const calcDisplayBalance = (movements) => {
+  const balance = movements.reduce((acc, move) => acc + move, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calcDisplayBalance(account1.movements);
+
 const createUserNames = (accs) => {
   accs.forEach((acc) => {
     acc.username = acc.owner
@@ -96,10 +103,6 @@ const createUserNames = (accs) => {
 };
 
 createUserNames(accounts);
-//console.log(accounts);
-
-//console.log(createUserNames("Jonas Schmedtmann"));
-//console.log(createUserNames("Ahiamata Mawuli Gabriel"));
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -115,15 +118,3 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 //console.log(movements.filter((mov) => mov < 0));
-
-const widrawals = movements.filter(function (mov) {
-  return mov < 0;
-});
-
-//console.log(widrawals);
-
-const balance = movements.reduce((acc, cur, i, arr) => {
-  return acc + cur;
-});
-
-console.log(balance);
