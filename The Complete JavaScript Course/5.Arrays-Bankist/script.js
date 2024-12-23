@@ -120,4 +120,10 @@ const widrawals = movements.filter(function (mov) {
   return mov < 0;
 });
 
-console.log(widrawals);
+//console.log(widrawals);
+
+const balance = movements.reduce((acc, cur, i, arr) => {
+  return acc + cur;
+});
+
+console.log(balance);
