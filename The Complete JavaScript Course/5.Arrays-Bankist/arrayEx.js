@@ -7,15 +7,15 @@ const calcAverageHumanAge = (ages) => {
     } else {
       humanAge = 16 + age * 4;
       allAumanAge.push(humanAge);
-      //console.log(allAumanAge);
     }
   }
-
-  const above18 = allAumanAge.filter((age) => age > 18);
-  const average = above18.reduce((total, age) => (total + age) / 2);
-
+  const above18 = allAumanAge.filter((age) => age >= 18);
+  const totalAbove18 = above18.reduce((total, age) => total + age, 0);
+  const average = totalAbove18 / above18.length;
   return average;
 };
 
-console.log(calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]));
-console.log(calcAverageHumanAge([16, 6, 10, 1, 15, 8, 3]));
+const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+
+//console.log(avg1, avg2);

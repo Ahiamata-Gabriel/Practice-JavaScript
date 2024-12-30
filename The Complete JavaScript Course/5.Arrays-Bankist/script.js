@@ -87,10 +87,31 @@ displayMovements(account1.movements);
 
 const calcDisplayBalance = (movements) => {
   const balance = movements.reduce((acc, move) => acc + move, 0);
-  labelBalance.textContent = `${balance} EUR`;
+  labelBalance.textContent = `${balance} €`;
 };
 
 calcDisplayBalance(account1.movements);
+
+const calcDisplaySummary = (movements) => {
+  const incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes} €`;
+
+  const outGoingMoney = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(outGoingMoney)} €`;
+
+  const interest = movements
+    .filter((mov) => mov > 0)
+    .map((mov) => mov * 0.012)
+    .filter((int) => int >= 1)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumInterest.textContent = `${interest} €`;
+};
+
+calcDisplaySummary(account1.movements);
 
 const createUserNames = (accs) => {
   accs.forEach((acc) => {
@@ -118,3 +139,11 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 //console.log(movements.filter((mov) => mov < 0));
+
+const eurToUsd = 1.1;
+const totalDepositsUSD = movements
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+
+//console.log(totalDepositsUSD);
