@@ -146,4 +146,7 @@ const totalDepositsUSD = movements
   .map((mov) => mov * eurToUsd)
   .reduce((acc, mov) => acc + mov, 0);
 
-//console.log(totalDepositsUSD);
+console.log(accounts);
+
+const account = accounts.find((acc) => acc.owner === "Sarah Smith");
+console.log(account);
