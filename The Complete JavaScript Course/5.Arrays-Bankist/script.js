@@ -122,8 +122,15 @@ const createUserNames = (accs) => {
       .join("");
   });
 };
-
 createUserNames(accounts);
+
+let currentAccount;
+
+btnLogin.addEventListener("click", (e) => {
+  e.preventDefault();
+  accounts.find((acc) => acc.owner === inputLoginUsername.value);
+  console.log("LOGED IN !!");
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -146,7 +153,7 @@ const totalDepositsUSD = movements
   .map((mov) => mov * eurToUsd)
   .reduce((acc, mov) => acc + mov, 0);
 
-console.log(accounts);
+//console.log(accounts);
 
 const account = accounts.find((acc) => acc.owner === "Sarah Smith");
-console.log(account);
+//console.log(account);
