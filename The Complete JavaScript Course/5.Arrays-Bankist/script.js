@@ -80,7 +80,7 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
+// displayMovements(account1.movements);
 //console.log(containerMovements.innerHTML);
 
 //*** BEGINNING OF MODIFIED CODE ***
@@ -90,7 +90,7 @@ const calcDisplayBalance = (movements) => {
   labelBalance.textContent = `${balance} €`;
 };
 
-calcDisplayBalance(account1.movements);
+// calcDisplayBalance(account1.movements);
 
 const calcDisplaySummary = (movements) => {
   const incomes = movements
@@ -111,7 +111,7 @@ const calcDisplaySummary = (movements) => {
   labelSumInterest.textContent = `${interest} €`;
 };
 
-calcDisplaySummary(account1.movements);
+// calcDisplaySummary(account1.movements);
 
 const createUserNames = (accs) => {
   accs.forEach((acc) => {
@@ -139,10 +139,14 @@ btnLogin.addEventListener("click", (e) => {
     }`;
 
     containerApp.style.opacity = 100;
-    console.log("Logged In");
+    inputLoginUsername.value = "";
+    inputLoginPin.value = "";
   }
-});
 
+  displayMovements(currentAccount.movements);
+  calcDisplayBalance(currentAccount.movements);
+  calcDisplaySummary(currentAccount.movements);
+});
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
