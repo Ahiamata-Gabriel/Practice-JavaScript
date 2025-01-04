@@ -141,6 +141,7 @@ btnLogin.addEventListener("click", (e) => {
     containerApp.style.opacity = 100;
     inputLoginUsername.value = "";
     inputLoginPin.value = "";
+    inputClosePin.blur();
   }
 
   displayMovements(currentAccount.movements);
