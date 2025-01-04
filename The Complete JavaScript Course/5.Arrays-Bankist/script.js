@@ -92,20 +92,20 @@ const calcDisplayBalance = (movements) => {
 
 // calcDisplayBalance(account1.movements);
 
-const calcDisplaySummary = (movements) => {
-  const incomes = movements
+const calcDisplaySummary = (acc) => {
+  const incomes = acc.movements
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes} €`;
 
-  const outGoingMoney = movements
+  const outGoingMoney = acc.movements
     .filter((mov) => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(outGoingMoney)} €`;
 
-  const interest = movements
+  const interest = acc.movements
     .filter((mov) => mov > 0)
-    .map((mov) => mov * 0.012)
+    .map((mov) => mov * acc.interestRate)
     .filter((int) => int >= 1)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumInterest.textContent = `${interest} €`;
