@@ -147,6 +147,11 @@ btnLogin.addEventListener("click", (e) => {
   calcDisplayBalance(currentAccount.movements);
   calcDisplaySummary(currentAccount);
 });
+
+btnTransfer.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
