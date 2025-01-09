@@ -150,6 +150,8 @@ btnLogin.addEventListener("click", (e) => {
 
 btnTransfer.addEventListener("click", (e) => {
   e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  const receiverAcc = Number(inputTransferTo.value);
 });
 
 /////////////////////////////////////////////////
