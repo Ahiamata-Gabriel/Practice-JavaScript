@@ -124,6 +124,12 @@ const createUserNames = (accs) => {
 };
 createUserNames(accounts);
 
+const updateUI = function (currentAccount) {
+  displayMovements(currentAccount.movements);
+  calcDisplayBalance(currentAccount);
+  calcDisplaySummary(currentAccount);
+};
+
 let currentAccount;
 
 btnLogin.addEventListener("click", (e) => {
@@ -143,9 +149,7 @@ btnLogin.addEventListener("click", (e) => {
     inputClosePin.blur();
   }
 
-  displayMovements(currentAccount.movements);
-  calcDisplayBalance(currentAccount);
-  calcDisplaySummary(currentAccount);
+  updateUI(currentAccount);
 });
 
 btnTransfer.addEventListener("click", (e) => {
@@ -163,6 +167,7 @@ btnTransfer.addEventListener("click", (e) => {
   ) {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
+    updateUI(currentAccount);
   }
 });
 
