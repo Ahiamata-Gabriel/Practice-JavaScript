@@ -159,7 +159,7 @@ btnTransfer.addEventListener("click", (e) => {
     (acc) => acc.username === inputTransferTo.value
   );
 
-  inputTransferAmount.value = inputTransferTo = "";
+  inputTransferAmount.value = inputTransferTo.value = "";
 
   if (
     amount > 0 &&
