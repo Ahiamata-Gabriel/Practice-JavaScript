@@ -173,7 +173,7 @@ btnTransfer.addEventListener("click", (e) => {
   }
 });
 
-btnClose.addEventListener("click", function (e, currentAccount) {
+btnClose.addEventListener("click", function (e) {
   e.preventDefault();
   if (
     inputCloseUsername.value === currentAccount.username &&
@@ -186,6 +186,7 @@ btnClose.addEventListener("click", function (e, currentAccount) {
     accounts.splice(index, 1);
     containerApp.style.opacity = 0;
   }
+  inputCloseUsername.value = inputClosePin.value = "";
 });
 
 /////////////////////////////////////////////////
