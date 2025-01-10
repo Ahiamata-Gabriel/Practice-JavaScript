@@ -173,8 +173,13 @@ btnTransfer.addEventListener("click", (e) => {
   }
 });
 
-btnClose.addEventListener("click", function (e) {
+btnClose.addEventListener("click", function (e, currentAccount) {
   e.preventDefault();
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+  }
 });
 
 /////////////////////////////////////////////////
