@@ -173,6 +173,10 @@ btnTransfer.addEventListener("click", (e) => {
   }
 });
 
+btnClose.addEventListener("click", function (e) {
+  e.preventDefault();
+});
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
