@@ -77,4 +77,16 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //MODIFICATION
 /////////////////////////////////////////////////
 
-const displayMovements = function (movements) {};
+const displayMovements = function (movements) {
+  movements.forEach(function (mov, i) {
+    const html = `
+    <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal"> ${i + 1}
+          </div>
+          <div class="movements__value">${mov}</div>
+        </div> 
+    `;
+  });
+};
+
+displayMovements(account1.movements);
