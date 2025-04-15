@@ -78,6 +78,8 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 
 const displayMovements = function (movements) {
+  containerMovements.innerHTML = ""; // Clear previous movements
+
   movements.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
 
@@ -89,7 +91,11 @@ const displayMovements = function (movements) {
           <div class="movements__value">${mov}</div>
         </div> 
     `;
+
+    containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 };
 
 displayMovements(account1.movements);
+
+console.log(account1.movements);
