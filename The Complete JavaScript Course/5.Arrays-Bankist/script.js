@@ -101,5 +101,11 @@ displayMovements(account1.movements);
 const eurToUSD = 1.1;
 const movementsUSD = movements.map((mov) => mov * eurToUSD);
 
-console.log(movements);
-console.log(movementsUSD);
+const movementsDescriptions = movements.map((mov, i) => {
+  if (mov > 0) {
+    return `Movement ${i + 1}: You deposited ${mov}`;
+  } else {
+    return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
+  }
+});
+console.log(movementsDescriptions);
