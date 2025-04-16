@@ -122,8 +122,9 @@ const createUsernames = function (accs) {
 
 const withdrawals = movements.filter((mov) => mov < 0);
 
-const balance = movements.reduce((acc, curr, i, arr) => {
-  return acc + curr;
-}, 0);
+const calDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
 
-console.log(balance);
+calDisplayBalance(account1.movements);
