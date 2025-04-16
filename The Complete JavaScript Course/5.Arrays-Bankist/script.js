@@ -119,3 +119,11 @@ const createUsernames = function (accs) {
       .join("");
   });
 };
+
+const withdrawals = movements.filter((mov) => mov < 0);
+
+const balance = movements.reduce((acc, curr, i, arr) => {
+  return acc + curr;
+}, 0);
+
+console.log(balance);
