@@ -127,4 +127,7 @@ const calDisplayBalance = function (movements) {
   labelBalance.textContent = `${balance} EUR`;
 };
 
-calDisplayBalance(account1.movements);
+const totalDepositsUSD = movements
+  .filter((mov) => mov > 0)
+  .map(mov * eurToUSD)
+  .reduce((acc, mov) => acc + mov, 0);
