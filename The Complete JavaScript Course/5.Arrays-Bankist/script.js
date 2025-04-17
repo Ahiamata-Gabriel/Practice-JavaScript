@@ -139,8 +139,9 @@ const calcDispalySummary = (movements) => {
     .reduce((acc, mov) => acc + mov, 0);
 
   const interest = movements
-    .filter((mov = mov > 0))
+    .filter((mov) => mov > 0)
     .map((deposit) => (deposit * 1.2) / 100)
+    .filter((int) => int >= 1)
     .reduce((acc, int) => acc + int, 0);
 
   labelSumIn.textContent = `${incomes}€`;
