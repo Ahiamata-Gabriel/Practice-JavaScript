@@ -134,7 +134,12 @@ const calcDispalySummary = (movements) => {
     .filter((mov) => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
 
+  const outgoing = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+
   labelSumIn.textContent = `${incomes}€`;
+  labelSumOut.textContent = `${outgoing}€`;
 };
 
 calcDispalySummary(account1.movements);
