@@ -150,3 +150,13 @@ const calcDispalySummary = (movements) => {
 };
 
 calcDispalySummary(account1.movements);
+
+let currentAccount;
+
+btnLogin.addEventListener("click", function (e) {
+  e.preventDefault();
+  currentAccount = accounts.find(
+    (acc) => acc.owner === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+});
