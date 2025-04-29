@@ -165,9 +165,10 @@ btnLogin.addEventListener("click", function (e) {
     labelWelcome.textContent = `Welcome back, ${
       currentAccount.owner.split(" ")[0]
     }`;
-    containerApp.computedStyleMap.opacity = 100;
-    console.log("Login");
+    containerApp.style.opacity = 100;
   }
 
-  console.log(currentAccount);
+  displayMovements(currentAccount.movements);
+  calDisplayBalance(currentAccount.movements);
+  calcDispalySummary(currentAccount.movements);
 });
