@@ -166,6 +166,7 @@ btnLogin.addEventListener("click", function (e) {
       currentAccount.owner.split(" ")[0]
     }`;
     containerApp.style.opacity = 100;
+    inputLoginUsername.value = inputLoginPin.value = "";
   }
 
   displayMovements(currentAccount.movements);
