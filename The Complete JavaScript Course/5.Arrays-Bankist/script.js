@@ -167,9 +167,11 @@ btnLogin.addEventListener("click", function (e) {
     }`;
     containerApp.style.opacity = 100;
     inputLoginUsername.value = inputLoginPin.value = "";
-  }
 
-  displayMovements(currentAccount.movements);
-  calDisplayBalance(currentAccount.movements);
-  calcDispalySummary(currentAccount.movements);
+    inputLoginPin.blur();
+
+    displayMovements(currentAccount.movements);
+    calDisplayBalance(currentAccount.movements);
+    calcDispalySummary(currentAccount.movements);
+  }
 });
