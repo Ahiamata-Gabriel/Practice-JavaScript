@@ -124,12 +124,13 @@ createUsernames(accounts);
 
 const withdrawals = movements.filter((mov) => mov < 0);
 
-const calDisplayBalance = function (movements) {
-  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+const calDisplayBalance = function (acc) {
+  const balance = acc.movements.reduce((acc, mov) => acc + mov, 0);
+  acc.balance = balance;
   labelBalance.textContent = `${balance} €`;
 };
 
-calDisplayBalance(account1.movements);
+calDisplayBalance(account1);
 
 const calcDispalySummary = (acc) => {
   const incomes = acc.movements
@@ -171,7 +172,7 @@ btnLogin.addEventListener("click", function (e) {
     inputLoginPin.blur();
 
     displayMovements(currentAccount.movements);
-    calDisplayBalance(currentAccount.movements);
+    calDisplayBalance(currentAccount);
     calcDispalySummary(currentAccount);
   }
 });
