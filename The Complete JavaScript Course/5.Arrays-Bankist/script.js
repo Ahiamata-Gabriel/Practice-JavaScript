@@ -121,6 +121,12 @@ const createUsernames = function (accs) {
 
 createUsernames(accounts);
 
+const updateUI = (acc) => {
+  displayMovements(acc.movements);
+  calDisplayBalance(currentAccount);
+  calcDispalySummary(currentAccount);
+};
+
 const withdrawals = movements.filter((mov) => mov < 0);
 
 const calDisplayBalance = function (acc) {
@@ -169,9 +175,7 @@ btnLogin.addEventListener("click", function (e) {
 
     inputLoginPin.blur();
 
-    displayMovements(currentAccount.movements);
-    calDisplayBalance(currentAccount);
-    calcDispalySummary(currentAccount);
+    updateUI(currentAccount);
   }
 });
 
@@ -190,5 +194,7 @@ btnTransfer.addEventListener("click", function (e) {
   ) {
     currentAccount.movements.push(-amount);
     receiverAcc.movements.push(amount);
+
+    updateUI(currentAccount);
   }
 });
