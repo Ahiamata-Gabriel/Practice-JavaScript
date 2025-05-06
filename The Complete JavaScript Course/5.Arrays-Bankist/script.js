@@ -199,3 +199,7 @@ btnTransfer.addEventListener("click", function (e) {
     updateUI(currentAccount);
   }
 });
+
+btnClose.addEventListener("click", (e) => {
+  e.preventDefault();
+});
