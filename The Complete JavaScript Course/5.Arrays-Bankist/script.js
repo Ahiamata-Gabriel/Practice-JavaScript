@@ -108,7 +108,6 @@ const movementsDescriptions = movements.map((mov, i) => {
     return `Movement ${i + 1}: You withdrew ${Math.abs(mov)}`;
   }
 });
-console.log(movementsDescriptions);
 
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
