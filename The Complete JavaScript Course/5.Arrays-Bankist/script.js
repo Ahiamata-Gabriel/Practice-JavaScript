@@ -200,6 +200,10 @@ btnTransfer.addEventListener("click", function (e) {
   }
 });
 
+btnLoan.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
 btnClose.addEventListener("click", (e) => {
   e.preventDefault();
   if (
