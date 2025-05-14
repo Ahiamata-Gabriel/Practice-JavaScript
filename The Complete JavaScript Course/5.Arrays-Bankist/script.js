@@ -202,6 +202,7 @@ btnTransfer.addEventListener("click", function (e) {
 
 btnLoan.addEventListener("click", (e) => {
   e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
 });
 
 btnClose.addEventListener("click", (e) => {
