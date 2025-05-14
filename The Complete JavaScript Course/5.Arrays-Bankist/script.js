@@ -230,3 +230,5 @@ btnClose.addEventListener("click", (e) => {
 
   inputCloseUsername.value = inputClosePin.value = "";
 });
+
+movements.sort();
