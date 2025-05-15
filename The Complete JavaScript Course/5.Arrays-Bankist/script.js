@@ -231,4 +231,11 @@ btnClose.addEventListener("click", (e) => {
   inputCloseUsername.value = inputClosePin.value = "";
 });
 
-movements.sort();
+const allMovMents = accounts.map((acc) => acc.movements);
+console.log(allMovMents);
+
+const allFlat = allMovMents.flat();
+console.log(allFlat);
+
+const allsum = allFlat.reduce((acc, cur) => acc + cur, 0);
+console.log(allsum);
