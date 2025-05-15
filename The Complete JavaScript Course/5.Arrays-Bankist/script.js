@@ -234,7 +234,8 @@ btnClose.addEventListener("click", (e) => {
 });
 
 let sorted = false;
-btn.addEventListener("click", function (e) {
+btnSort.addEventListener("click", function (e) {
   e.preventDefault();
   displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
 });
