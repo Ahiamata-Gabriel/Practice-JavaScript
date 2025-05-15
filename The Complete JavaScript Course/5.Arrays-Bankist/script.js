@@ -77,8 +77,10 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //MODIFICATION
 /////////////////////////////////////////////////
 
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = ""; // Clear previous movements
+
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
   movements.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
@@ -230,12 +232,3 @@ btnClose.addEventListener("click", (e) => {
 
   inputCloseUsername.value = inputClosePin.value = "";
 });
-
-const allMovMents = accounts.map((acc) => acc.movements);
-console.log(allMovMents);
-
-const allFlat = allMovMents.flat();
-console.log(allFlat);
-
-const allsum = allFlat.reduce((acc, cur) => acc + cur, 0);
-console.log(allsum);
