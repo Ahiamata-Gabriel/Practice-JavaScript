@@ -239,15 +239,3 @@ btnSort.addEventListener("click", function (e) {
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
-
-const x = new Array(7);
-console.log(x);
-
-const y = Array.from({ length: 7 }, () => 1);
-console.log(y);
-
-const gg = Array.from(
-  { length: 100 },
-  (_, i) => i * Math.floor(Math.random() + 1)
-);
-console.log(gg);
