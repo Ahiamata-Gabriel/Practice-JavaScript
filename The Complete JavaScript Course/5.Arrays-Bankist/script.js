@@ -217,7 +217,7 @@ btnTransfer.addEventListener("click", function (e) {
 
 btnLoan.addEventListener("click", (e) => {
   e.preventDefault();
-  const amount = Number(inputLoanAmount.value);
+  const amount = Math.floor(inputLoanAmount.value);
   if (
     amount > 0 &&
     currentAccount.movements.some((mov) => mov >= amount * 0.1)
@@ -253,4 +253,7 @@ btnSort.addEventListener("click", function (e) {
   sorted = !sorted;
 });
 
-console.log(Number.isNaN(20));
+const randomInt = (min, max) =>
+  Math.trunc(Math.random() * (max - min) + 1) + min;
+
+console.log(randomInt(10, 1));
