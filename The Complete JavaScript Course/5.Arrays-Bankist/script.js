@@ -256,4 +256,4 @@ btnSort.addEventListener("click", function (e) {
 const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min) + 1) + min;
 
-console.log(randomInt(10, 1));
+console.log(2_000);
