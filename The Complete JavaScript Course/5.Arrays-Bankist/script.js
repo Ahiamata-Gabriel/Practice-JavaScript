@@ -175,6 +175,11 @@ calcDispalySummary(account1);
 
 let currentAccount;
 
+//*** FAKE LOGIN *** */
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
 btnLogin.addEventListener("click", function (e) {
   e.preventDefault();
   currentAccount = accounts.find(
