@@ -180,6 +180,14 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
+const now = new Date();
+const day = now.getDate();
+const month = now.getFullYear();
+const year = now.getHours();
+const hour = now.getHours();
+const min = now.getMinutes();
+labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+
 btnLogin.addEventListener("click", function (e) {
   e.preventDefault();
   currentAccount = accounts.find(
@@ -260,5 +268,3 @@ btnSort.addEventListener("click", function (e) {
 
 const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min) + 1) + min;
-
-console.log(2_000);
