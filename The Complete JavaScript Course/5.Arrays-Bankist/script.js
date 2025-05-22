@@ -90,10 +90,12 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 //MODIFICATION
 /////////////////////////////////////////////////
 
-const displayMovements = function (movements, sort = false) {
+const displayMovements = function (acc, sort = false) {
   containerMovements.innerHTML = ""; // Clear previous movements
 
-  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+  const movs = sort
+    ? acc.movements.slice().sort((a, b) => a - b)
+    : acc.movements;
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? "deposit" : "withdrawal";
@@ -111,7 +113,7 @@ const displayMovements = function (movements, sort = false) {
   });
 };
 
-displayMovements(account1.movements);
+displayMovements(account1);
 
 const eurToUSD = 1.1;
 const movementsUSD = movements.map((mov) => mov * eurToUSD);
@@ -137,7 +139,7 @@ const createUsernames = function (accs) {
 createUsernames(accounts);
 
 const updateUI = (acc) => {
-  displayMovements(acc.movements);
+  displayMovements(acc);
   calDisplayBalance(currentAccount);
   calcDispalySummary(currentAccount);
 };
