@@ -205,6 +205,14 @@ containerApp.style.opacity = 100;
 
 //Experimenting API
 const now = new Date();
+const options = {
+  hour: "numeric",
+  minute: "numeric",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  weekday: "long",
+};
 labelDate.textContent = new Intl.DateTimeFormat();
 
 const day = `${now.getDate()}`.padStart(2, 0);
