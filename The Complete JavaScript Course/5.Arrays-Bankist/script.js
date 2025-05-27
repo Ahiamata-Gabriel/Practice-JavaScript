@@ -213,7 +213,7 @@ const options = {
   year: "numeric",
   weekday: "long",
 };
-labelDate.textContent = new Intl.DateTimeFormat();
+labelDate.textContent = new Intl.DateTimeFormat("en-UK", options).format(now);
 
 const day = `${now.getDate()}`.padStart(2, 0);
 const month = `${now.getMonth()}`.padStart(2, 0);
