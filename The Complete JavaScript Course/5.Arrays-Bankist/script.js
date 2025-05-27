@@ -279,12 +279,3 @@ btnSort.addEventListener("click", function (e) {
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
-
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min) + 1) + min;
-
-const future = new Date(2037, 10, 19, 15, 23);
-console.log(+future);
-
-const calcdaysPassed = (date1, date2) =>
-  (date2 - date1) / (1000 * 60 * 60 * 24);
