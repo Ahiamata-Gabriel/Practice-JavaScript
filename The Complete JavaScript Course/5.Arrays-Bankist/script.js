@@ -215,6 +215,9 @@ const options = {
 };
 labelDate.textContent = new Intl.DateTimeFormat("en-UK", options).format(now);
 
+const locale = navigator.language;
+console.log(locale);
+
 const day = `${now.getDate()}`.padStart(2, 0);
 const month = `${now.getMonth()}`.padStart(2, 0);
 const year = now.getFullYear();
