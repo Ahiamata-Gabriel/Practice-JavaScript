@@ -203,7 +203,10 @@ currentAccount = account1;
 updateUI(currentAccount);
 containerApp.style.opacity = 100;
 
+//Experimenting API
 const now = new Date();
+labelDate.textContent = new Intl.DateTimeFormat();
+
 const day = `${now.getDate()}`.padStart(2, 0);
 const month = `${now.getMonth()}`.padStart(2, 0);
 const year = now.getFullYear();
