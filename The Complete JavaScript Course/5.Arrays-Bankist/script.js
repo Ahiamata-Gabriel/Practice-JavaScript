@@ -304,4 +304,9 @@ btnSort.addEventListener("click", function (e) {
   sorted = !sorted;
 });
 
-setTimeout(() => console.log("Here is your pizza🍕"));
+setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza 🍕 ${ing1} and ${ing2}`),
+  3000,
+  "gari",
+  "beans"
+);
