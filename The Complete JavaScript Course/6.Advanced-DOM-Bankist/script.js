@@ -42,3 +42,7 @@ functionality and analytics.
 </button>`;
 
 header.append(message);
+
+document
+  .querySelector('.btn--close-cookie')
+  .addEventListener('click', () => message.remove());
