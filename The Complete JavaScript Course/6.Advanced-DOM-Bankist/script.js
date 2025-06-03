@@ -56,7 +56,7 @@ btnScrollTo.addEventListener('click', () => {
   //   left: s1cords.left + window.pageXOffset,
   //   top: s1cords.top + window.pageYOffset,
   //   behavior: 'smooth',
-  // });
+  // });]
 
   section1.scrollIntoView({ behavior: 'smooth' });
 });
