@@ -64,3 +64,11 @@ const randomColor = () =>
 document
   .querySelector('.nav__link')
   .addEventListener('click', e => console.log('LINK'));
+
+document
+  .querySelector('.nav__link')
+  .addEventListener('click', e => console.log('LINK'));
+
+document
+  .querySelector('.nav__link')
+  .addEventListener('click', e => console.log('LINK'));
