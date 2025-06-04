@@ -53,3 +53,5 @@ const section1 = document.querySelector('#section--1');
 btnScrollTo.addEventListener('click', () => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+//rgb(244,255,200)
