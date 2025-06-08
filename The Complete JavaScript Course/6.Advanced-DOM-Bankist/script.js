@@ -66,9 +66,9 @@ document
   .addEventListener('click', e => console.log('LINK'));
 
 document
-  .querySelector('.nav__link')
+  .querySelector('.nav__links')
   .addEventListener('click', e => console.log('LINK'));
 
 document
-  .querySelector('.nav__link')
+  .querySelector('.nav')
   .addEventListener('click', e => console.log('LINK'));
