@@ -30,6 +30,15 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', () => {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+//***PRACTICE ***
+
 const header = document.querySelector('.header');
 
 const message = document.createElement('div');
@@ -46,13 +55,6 @@ header.append(message);
 document
   .querySelector('.btn--close-cookie')
   .addEventListener('click', () => message.remove());
-
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
-
-btnScrollTo.addEventListener('click', () => {
-  section1.scrollIntoView({ behavior: 'smooth' });
-});
 
 //rgb(244,255,200)
 const randomInt = (min, max) =>
