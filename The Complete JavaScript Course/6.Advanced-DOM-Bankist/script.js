@@ -10,6 +10,7 @@ const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 const nav = document.querySelector('.nav');
+
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContent = document.querySelectorAll('.operations__content');
@@ -69,41 +70,3 @@ tabsContainer.addEventListener('click', function (e) {
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
     .classList.add('operations__content--active');
 });
-
-//***PRACTICE ***
-
-// const header = document.querySelector('.header');
-
-// const message = document.createElement('div');
-// message.classList.add('cookie-message');
-
-// message.innerHTML = `We use cookies for improved
-// functionality and analytics.
-// <button class="btn btn--close-cookie">
-//   Got it!
-// </button>`;
-
-// header.append(message);
-
-// document
-//   .querySelector('.btn--close-cookie')
-//   .addEventListener('click', () => message.remove());
-
-// //rgb(244,255,200)
-// const randomInt = (min, max) =>
-//   Math.floor(Math.random() * (max - min + 1) + min);
-
-// const randomColor = () =>
-//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-
-// document
-//   .querySelector('.nav__link')
-//   .addEventListener('click', e => console.log('LINK'));
-
-// document
-//   .querySelector('.nav__links')
-//   .addEventListener('click', e => console.log('LINK'));
-
-// document
-//   .querySelector('.nav')
-//   .addEventListener('click', e => console.log('LINK'));
