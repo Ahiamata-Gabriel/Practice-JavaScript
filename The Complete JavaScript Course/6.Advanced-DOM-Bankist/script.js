@@ -1,5 +1,7 @@
 'use strict';
 
+const { Component } = require('react');
+
 ///////////////////////////////////////
 // Modal window
 
@@ -44,6 +46,10 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+
+//Tabbed Component
+
+const tabs = document.querySelectorAll('operations__tab');
 
 //***PRACTICE ***
 
