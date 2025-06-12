@@ -53,14 +53,17 @@ const tabsContent = document.querySelectorAll('.operations__content');
 
 tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
+
   //Guard clause
   if (!clicked) return;
 
   //remove active classes
   tabs.forEach(t => t.classList.remove('operations__tab--active'));
   tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+
   //Active Tab
   clicked.classList.add('operations__tab--active');
+
   //Active Content Area
   document
     .querySelector(`.operations__content--${clicked.dataset.tab}`)
