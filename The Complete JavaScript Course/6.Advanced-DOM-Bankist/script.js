@@ -67,11 +67,24 @@ tabsContainer.addEventListener('click', function (e) {
     .classList.add('operations__content--active');
 });
 
-nav.addEventListener('mouseover', function (e) {
+//Menu fade Animation
+const handleHover = (e, opacity) => {
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
-    console.log(link);
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
+
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = opacity;
+    });
+    logo.style.opacity = opacity;
   }
+};
+
+nav.addEventListener('mouseover', function (e) {
+  handleHover(e, 0.5);
 });
 
-nav.addEventListener('mouseover', function (e) {});
+nav.addEventListener('mouseout', function (e) {
+  handleHover(e, 1);
+});
