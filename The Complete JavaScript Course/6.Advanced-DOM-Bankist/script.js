@@ -67,4 +67,11 @@ tabsContainer.addEventListener('click', function (e) {
     .classList.add('operations__content--active');
 });
 
-nav.addEventListener('mouseover');
+nav.addEventListener('mouseover', function (e) {
+  if (e.target.classList.contains('nav__link')) {
+    const link = e.target;
+    console.log(link);
+  }
+});
+
+nav.addEventListener('mouseover', function (e) {});
