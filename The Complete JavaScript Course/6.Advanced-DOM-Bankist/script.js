@@ -93,3 +93,6 @@ window.addEventListener('scroll', function () {
   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
 });
+
+//Sticky navigation : Intersection Observer API
+const obsCallback = function () {};
