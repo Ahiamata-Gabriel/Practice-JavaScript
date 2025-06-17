@@ -95,11 +95,15 @@ window.addEventListener('scroll', function () {
 });
 
 //Sticky navigation : Intersection Observer API
-const obsCallback = function () {};
+const obsCallback = function (entries, obsever) {
+  entries.forEach(entry => {
+    console.log(entry);
+  });
+};
 
 const obsOptions = {
   root: null,
-  threshold: 0.1,
+  threshold: 0.5,
 };
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
