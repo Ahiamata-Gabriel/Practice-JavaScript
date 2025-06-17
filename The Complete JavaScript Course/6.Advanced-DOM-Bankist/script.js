@@ -87,9 +87,9 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 //Sticky Navigation
 const initialCoords = section1.getBoundingClientRect();
-console.log(initialCoords);
 
+//using the scroll evenlistener is not efficient,
 window.addEventListener('scroll', function () {
-  if (this.window.scrollY > initialCoords.top) nav.classList.add('sticky');
+  if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
   else nav.classList.remove('sticky');
 });
