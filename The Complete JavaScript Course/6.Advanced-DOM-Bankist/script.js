@@ -97,7 +97,10 @@ window.addEventListener('scroll', function () {
 //Sticky navigation : Intersection Observer API
 const obsCallback = function () {};
 
-const obsOptions = {};
+const obsOptions = {
+  root: null,
+  threshold: 0.1,
+};
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 
