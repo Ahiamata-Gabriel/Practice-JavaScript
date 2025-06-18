@@ -96,21 +96,6 @@ window.addEventListener('scroll', function () {
 
 //***Sticky navigation : Intersection Observer API***//
 
-// const obsCallback = function (entries, obsever) {
-//   entries.forEach(entry => {
-//     console.log(entry);
-//   });
-// };
-
-// const obsOptions = {
-//   root: null,
-//   threshold: 0.1,
-// };
-
-// const observer = new IntersectionObserver(obsCallback, obsOptions);
-
-//observer.obser ve(section1);
-
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 
