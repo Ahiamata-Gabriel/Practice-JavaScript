@@ -95,7 +95,6 @@ window.addEventListener('scroll', function () {
 });
 
 //***Sticky navigation : Intersection Observer API***//
-
 const header = document.querySelector('.header');
 const navHeight = nav.getBoundingClientRect().height;
 
@@ -113,3 +112,6 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(header);
+
+//Reveal Secrions  */
+const revealSection = function (entries, observer) {};
