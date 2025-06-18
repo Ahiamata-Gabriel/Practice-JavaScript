@@ -94,18 +94,31 @@ window.addEventListener('scroll', function () {
   else nav.classList.remove('sticky');
 });
 
-//Sticky navigation : Intersection Observer API
-const obsCallback = function (entries, obsever) {
-  entries.forEach(entry => {
-    console.log(entry);
-  });
+//***Sticky navigation : Intersection Observer API***//
+
+// const obsCallback = function (entries, obsever) {
+//   entries.forEach(entry => {
+//     console.log(entry);
+//   });
+// };
+
+// const obsOptions = {
+//   root: null,
+//   threshold: 0.1,
+// };
+
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+
+//observer.observe(section1);
+
+const header = document.querySelector('.header');
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  nav.classList.add('sticky');
 };
 
-const obsOptions = {
+const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  threshold: 0.1,
-};
-
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-
-observer.observe(section1);
+  threshold: 0,
+});
