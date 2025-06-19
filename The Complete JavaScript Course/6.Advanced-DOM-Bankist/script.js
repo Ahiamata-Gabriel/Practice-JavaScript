@@ -116,10 +116,16 @@ headerObserver.observe(header);
 //Reveal Secrions  */
 const allSections = document.querySelectorAll('.section');
 
-const revealSection = function (entries, observer) {};
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+};
 
-const sectionObserver = new IntersectionObserver(revealSection, {});
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
 
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
+  section.classList.add('section--hidden');
 });
