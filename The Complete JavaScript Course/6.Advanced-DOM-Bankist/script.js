@@ -88,10 +88,10 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 const initialCoords = section1.getBoundingClientRect();
 
 //using the scroll evenlistener is not efficient,
-window.addEventListener('scroll', function () {
-  if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
-  else nav.classList.remove('sticky');
-});
+// window.addEventListener('scroll', function () {
+//   if (window.scrollY > initialCoords.top) nav.classList.add('sticky');
+//   else nav.classList.remove('sticky');
+// });
 
 //***Sticky navigation : Intersection Observer API***//
 const header = document.querySelector('.header');
