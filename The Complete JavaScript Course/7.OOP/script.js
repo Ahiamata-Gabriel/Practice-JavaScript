@@ -7,4 +7,4 @@ const Person = function (firstName, birthYear) {
 
 const gabby = new Person('Mawuli', 1991);
 
-console.log(gabby);
+console.log(gabby.__proto__ === Person.prototype);
