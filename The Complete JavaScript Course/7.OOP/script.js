@@ -32,17 +32,28 @@
 
 // console.log(car1.brake());
 
-class PersonCl {
-  constructor(name, birthYear) {
-    this.name = name;
-    this.birthYear = birthYear;
-  }
+// class PersonCl {
+//   constructor(name, birthYear) {
+//     this.name = name;
+//     this.birthYear = birthYear;
+//   }
 
-  calcAge() {
-    console.log(2025 - this.birthYear);
-  }
-}
+//   calcAge() {
+//     console.log(2025 - this.birthYear);
+//   }
+// }
 
-const jonas = new PersonCl('jonas', 1991);
+// const jonas = new PersonCl('jonas', 1991);
 
-console.log(jonas);
+// console.log(jonas);
+
+const account = {
+  owner: 'Jonas',
+  movement: [200, 530, 120, 300],
+
+  get latest() {
+    return this.movement.at(-1);
+  },
+};
+
+console.log(account.latest);
