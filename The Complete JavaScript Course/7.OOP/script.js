@@ -47,13 +47,4 @@
 
 // console.log(jonas);
 
-const account = {
-  owner: 'Jonas',
-  movement: [200, 530, 120, 300],
-
-  get latest() {
-    return this.movement.at(-1);
-  },
-};
-
-console.log(account.latest);
+/ /;
