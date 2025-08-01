@@ -97,3 +97,5 @@ class PersonCl {
     return this._fullName;
   }
 }
+
+class Student extends PersonCl {}
